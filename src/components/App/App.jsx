@@ -17,11 +17,11 @@ export const App = () => {
 
   const totalFeedback = feedback.good + feedback.bad + feedback.neutral;
 
-  const countPositiveFeedbackPercentage = () => {
-    return Math.round((feedback.good / totalFeedback) * 100);
-  };
+  // const countPositiveFeedbackPercentage = () => {
+  //   return Math.round((feedback.good / totalFeedback) * 100);
+  // };
   const options = Object.keys(feedback);
-  const positivePercentage = countPositiveFeedbackPercentage();
+  const positivePercentage = Math.round((feedback.good / totalFeedback) * 100);
 
   return (
     <SectionWrap>
